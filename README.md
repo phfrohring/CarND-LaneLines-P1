@@ -12,7 +12,7 @@ My pipeline is composed of 7 steps:
 2. Smooth the grayscale image using a Gaussian Blur. 
 ![Objective](./img/GaussianBlur.png)
 
-3. Find the edges using the Cunny algorithm. A smoothed image limit the gradient from pixels to pixels: it's useful to get rid of potential outliers.
+3. Find the edges using the Cunny algorithm. A smoothed image limits the gradient from pixels to pixels: it's useful to get rid of potential outliers.
 ![Objective](./img/cunny_edge.png)
 
 4. Mask out the region of the image that is useless for finding lanes using a trapeze.
@@ -33,17 +33,17 @@ My pipeline is composed of 7 steps:
 
 1. Finding the parameters by hand is not going to work outside of this exercise. 
 2. Finding the parameters relies on human qualitative judgment instead of quantitative measurements.
-3. This code is likely to break in most situations: bad weather, car crossing, lacking lines, superposed marking...
+3. This code is likely to break in most situations: bad weather, car crossing, lacking lines, superposed markings...
 4. Searching for straight lines in a world made of curves is not going to work.
 5. Without a concept of depth to separate what is near from what is far, the system cannot be used in a 3D world.
 
 
 ## Improvements 
 
-1. Improving the code so that all the human found parameters are self optimised using a feedback loop and objectives.
-2. Introducing a notion of depth using for example an other image with an other angle or a radar.
+1. Improving the code so that all the human found parameters are self optimised using a feedback loop and objective functions.
+2. Introducing a notion of depth using, for example, an other image with an other angle or a radar.
 3. Generalising from finding straight lines in a 2D world to curves in a 3D world.
-4. Generalising from finding lines to imagining the lane and considering the marking on the road as a mere suggestion: sometimes, the marking may not be there, yet the lane is in the driver's head. Sometimes, the marking does not make sense e.g. temporary markings on top of original markings.
+4. Generalising from finding lines to imagining the lane and considering the markings on the road as mere suggestions: sometimes, the marking may not be there, yet the lane is in the driver's head. Sometimes, the markings do not make sense e.g. temporary markings on top of original markings.
 
 ## Optional Challenge
 
